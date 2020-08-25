@@ -70,7 +70,8 @@ function crearTableRowCarrito(info)
      data_quantity.appendChild(document.createTextNode(info['quantity']))
 
      delete_button = document.createElement('a')
-     delete_button.appendChild(document.createTextNode('X'))
+     delete_button.appendChild(document.createTextNode('x'))
+     delete_button.setAttribute('href', '#')
      delete_button.className = 'borrar-curso'
 
      row.appendChild(data_img)
