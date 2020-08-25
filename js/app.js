@@ -17,6 +17,10 @@ body.addEventListener('click', (e) => {
           refresh_carrito([])
           localStorage.setItem('carrito', JSON.stringify([]))
      }
+     else if(e.target.className.includes('borrar-curso'))
+     {
+          console.log('borrando curso....')
+     }
 })
 
 document.addEventListener('DOMContentLoaded', () => {
