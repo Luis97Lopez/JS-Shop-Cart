@@ -19,7 +19,9 @@ body.addEventListener('click', (e) => {
      }
      else if(e.target.className.includes('borrar-curso'))
      {
-          console.log('borrando curso....')
+          const producto = target.parentNode 
+          delete_product(producto)
+          localStorage.setItem('carrito', get_carrito_in_JSON())
      }
 })
 
@@ -121,4 +123,9 @@ function refresh_carrito(new_carrito)
      new_carrito.forEach((value) => {
           carrito.appendChild(crearTableRowCarrito(value))
      })
+}
+
+function delete_product(producto)
+{
+     carrito.removeChild(producto)
 }
